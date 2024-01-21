@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    color: #000000;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* ******************************************************************* */
+
+/* Your Styles Starting from here! */
+
+@media all and (max-width: 600px) {
+  * {
+    cursor: default;
+  }
+}

@@ -1,0 +1,135 @@
+.livecaseSkeleton {
+    width: 100%;
+    max-width: 2000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.2rem;
+    padding-left: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.livecaseSkeleton__main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
+}
+
+.livecase__side {
+    padding: 1.2rem;
+    background-color: #ffffff4f;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 24px;
+}
+
+.livecase__head {
+    width: 200px;
+    padding: 0.8rem;
+    background-color: rgba(36, 36, 36, 0.042);
+    border-radius: 48px;
+    position: relative;
+}
+
+.livecase__info {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: rgba(36, 36, 36, 0.042);
+    border-radius: 48px;
+    position: relative;
+}
+
+.livecase__detail {
+    width: 100%;
+    padding: 2.6rem;
+    background-color: rgba(35, 35, 35, 0.031);
+    border-radius: 48px;
+    position: relative;
+}
+
+.livecase__moredetails {
+    width: 100%;
+    padding: 10.6rem;
+    background-color: rgba(35, 35, 35, 0.031);
+    border-radius: 48px;
+    position: relative;
+}
+
+.livecase__detail::after, .livecase__info::after, .livecase__head::after, .livecase__moredetails::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(12deg , rgba(78, 78, 78, 0.103) , rgba(234, 234, 234, 0.131), rgba(78, 78, 78, 0.089) );
+    box-shadow: 0 0 9px 3px rgba(106, 106, 106, 0.069);
+    border-radius: inherit;
+}
+
+.livecase__head::after, .livecase__info::after {
+    animation: loading 1.2s infinite ease alternate;
+}
+
+.livecase__detail::after, .livecase__moredetails::after {
+    animation: loading 1.2s infinite 0.4s ease alternate;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0.8;
+    }
+
+    30% {
+        opacity: 0.9;
+    }
+
+    55% {
+        opacity: 0.72;
+    }
+
+    80% {
+        opacity: 0.24;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@media all and (width <= 980px) {
+
+    .livecaseSkeleton {
+        padding: 1.2rem;
+    }
+
+}
+
+@media all and (width <= 600px) {
+
+    .livecaseSkeleton {
+        padding: 1rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .livecase__side {
+        padding: 0.8rem;
+        width: 100%;
+    }
+
+
+}

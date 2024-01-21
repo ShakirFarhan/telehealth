@@ -1,0 +1,587 @@
+.current__case {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 1.2rem;
+    padding-left: 260px;
+}
+
+.case__head {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: #FFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.head__side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+}
+
+.head__side a {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #232323;
+    border: 1.2px solid #FFF;
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    outline: none;
+}
+
+.head__side p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.head__talk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+}
+
+.head__talk button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 18px;
+    font-family: inherit;  
+    outline: none;
+    color: #ffffff;
+    border: 1.2px solid transparent;
+    font-size: 0.86rem;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.head__side a:focus-visible, .head__talk button:focus-visible, .head__side a:hover {
+    background-color: transparent !important;
+    border-color: #df4e15;
+    color: #df4e15;
+}
+
+/* .case__breadcrumb {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.2rem;
+    margin-top: 1rem;
+}
+
+.case__breadcrumb a {
+    border: 1.2px solid #df4e15;
+    font-size: 0.86rem;
+    padding: 0.4rem 0.6rem;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    background-color: #df4e15;
+    color: #FFF;
+    border-radius: 18px;
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+
+.case__breadcrumb a::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg) translateY(-68.5%);
+    right: 3.88px;
+    top: 50%;
+    z-index: -1;
+    border: 1.2px solid transparent;
+    background-color: #df4e15;
+    transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+}
+
+.case__breadcrumb p {
+    font-size: 0.95rem;
+    color: #313131;
+    padding-left: 0.8rem;
+    font-weight: 600;
+}
+
+.case__breadcrumb a:focus-visible  {
+    border-color: #df4e15;
+    color: #df4e15;
+    border-right: 1.2px solid transparent;
+    background-color: transparent;
+}
+
+.case__breadcrumb a:focus-visible::after {
+    background-color: transparent;
+    border-top: 1.28px solid #df4e15;
+    border-right: 1.28px solid #df4e15;
+}
+
+@media (pointer:fine) and (hover: hover) {
+    .case__breadcrumb a:hover  {
+        border-color: transparent;
+        color: #FFF;
+        background-color: #df4e15;
+    }
+
+    .case__breadcrumb a:hover::after {
+        background-color: #df4e15;
+        border: 1.2px solid transparent;
+    }
+} */
+
+.livecase__main {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+@media all and (width <= 1250px) {
+    .livecase__main {
+        gap: 1rem;
+        grid-template-rows: auto;
+    }
+}
+
+/* General Info & Other Info */
+
+.general__info, .other__info {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.8rem 1.2rem;
+    border-radius: 24px;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.patient__info, .patient__case, .patient__vitals {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.info__head, .info__caseId {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.info__head p {
+    font-size: 1.4rem;
+    color: #262626;
+    font-weight: 600;
+    text-align: left;
+}
+
+.info__caseId {
+    padding: 0.4rem 1.2rem;
+    border-radius: 18px;
+    border: 1px solid #df4e15A0;
+    background-color: #df4e15A0;
+    color: #000;
+}
+
+.info__caseId p:nth-child(1) {
+    border-right: 1.6px solid #232323;
+    padding-right: 0.6rem;
+    font-size: 0.9rem;
+    color: #484848;
+    text-align: center;
+}
+
+.info__caseId p:nth-child(2) {
+    font-size: 1rem;
+    color: #232323;
+    font-weight: 500;
+    text-align: center;
+}
+
+.patient__case {
+    padding-bottom: 1.4rem;
+    border-bottom: 1.6px solid #73737343;
+}
+
+.general__title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.general__title p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #383838;
+    text-align: left;
+}
+
+.case__details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.56rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.patient__case > p {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 24px;
+    border: 1px solid #df4e15A0;
+    background-color: #df4e15;
+    color: #FFF;
+    font-size: 0.80rem;
+    text-align: center;
+}
+
+.vitals__details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    grid-template-rows: auto;
+    justify-content: start;
+}
+
+@media all and (max-width: 1500px) {
+    .vitals__details {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+.vitals__info {
+    padding: 0.4rem 0 0.6rem;
+    border-radius: 18px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.213);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #FFF;
+}
+
+.vitalsInfo__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.2rem 0.8rem;
+    border-bottom: 1px solid #48484833;
+}
+
+.vitalsInfo__head p {
+    font-size: 0.9rem;
+    color: #767680;
+    text-align: left;
+    font-weight: 500;
+}
+
+.vitalsInfo__details {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0 0.8rem;
+}
+
+.vitalsInfo__details p {
+    font-size: 1.6rem;
+    color: #686868;
+}
+
+.vitals__info > p {
+    width: 95%;
+    text-align: left;
+    padding: 0.4rem 0.8rem;
+    border-radius: 24px 24px;
+    color: #FFF;
+    font-size: 0.7rem;
+}
+
+.paramedic__loc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-top: 1.6rem;
+    outline: none;
+}
+
+.paramedic__map {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
+    border-radius: 12px;
+    padding: 0.4rem;
+    background-color: #ffffffc1;
+    border: 1px solid #68686840;
+    box-shadow: 0 2px 4px 1px #23232315;
+    outline: none;
+    position: relative;
+    z-index: 10;
+}
+
+.paramedic__map iframe {
+    position: relative;
+    width: 100%;
+    outline: none !important;
+    height: 100%;
+}
+
+.paramedic__map iframe::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: inherit;
+    background: linear-gradient(45deg, rgba(35, 35, 35, 0.495), transparent, rgba(93, 93, 93, 0.131));
+    animation: load 2s infinite ease alternate;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    outline: none;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0.98;
+    }
+
+    30% {
+        opacity: 0.72;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    80% {
+        opacity: 0.72;
+    }
+
+    100% {
+        opacity: 0.92;
+    }
+}
+
+.vitals__charts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 0.8rem;
+}
+
+@media all and (max-width: 1530px) {
+    .vitals__charts {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.health__info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    padding: 0.4rem 0;
+}
+
+@media all and (min-width: 1500px) {
+    .health__info {
+        gap: 1.2rem;
+    }
+}
+
+.gluco__meter {
+    grid-row: 1/4;
+    background-color: #FFF;
+    border-radius: 18px;
+    padding: 1.2rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.213);
+}
+
+.gluco__meter > p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #484848;
+}
+
+.glucoBar__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.glucoBar__box p:nth-child(1) {
+    text-align: center;
+    font-weight: 600;
+    font-size: 4.2rem;
+    line-height: normal;
+    color: rgb(78, 245, 78);
+}
+
+.glucoBar__box p:nth-child(2) {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #484848;
+}
+
+.gluco__meter span {
+    width: fit-content;
+    font-size: 0.92rem;
+    color: #181818;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.4rem 1.8rem;
+    border-radius: 20px;
+}
+
+.healthInfo__main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.healthInfo__card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.6rem;
+    background-color: #FFF;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.213);
+    border-radius: 18px;
+}
+
+.healthInfo__card > p {
+    font-size: 0.94rem;
+    color: #383838;
+    font-weight: 500;
+    width: 100px;
+    text-align: center;
+}
+
+.healthInfo__detail {
+    flex-grow: 1;
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 31, 41, 0.16);
+    background: #F5F7F9;
+    padding: 0.4rem 0.4rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.healthInfo__detail p:nth-child(1) {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    text-align: center;
+    font-weight: 500;
+}
+
+.healthInfo__detail p:nth-child(2) {
+    font-size: 0.88rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+/* General Info & Other Info */
+
+
+@media all and (width <= 980px) {
+
+    .current__case {
+        padding: 1.2rem;
+    }
+
+}
+
+@media all and (width <= 640px) {
+
+    .current__case {
+        padding: 1rem 0.8rem;
+    }
+
+    .head__talk {
+        display: none;
+    }
+
+    .livecase__main {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .general__info, .other__info {
+        padding: 0.8rem;
+    }
+
+    .health__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .healthInfo__main, .gluco__meter {
+        width: 100%;
+    }
+
+    .paramedic__map {
+        aspect-ratio: 1;
+    }
+
+}

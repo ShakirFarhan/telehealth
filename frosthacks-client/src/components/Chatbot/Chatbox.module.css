@@ -1,0 +1,133 @@
+.app__chatbot {
+    right: 36px;
+    bottom: 36px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.app__chatbot > button {
+    width: 64px;
+    height: 64px;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background-color: #df4e15;
+    border: 2px solid #df4e15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+.chat__screen {
+    width: 300px;
+    height: 0;
+    background-color: #f3f2f2;
+    border-radius: 4px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease-in;
+}
+
+.chat__screen::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.chat__screen.active__chat {
+    height: 300px;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    box-shadow: 0 0 4px 1px #23232350;
+}
+
+.chat__session {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.chat__session::-webkit-scrollbar {
+    width: 0px;
+}
+
+.chat__req {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat__res {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.chat__res p, .chat__req p {
+    max-width: 100%;
+    text-wrap: wrap;
+    text-overflow: ellipsis;
+    background-color: #f0efef;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #23232343;
+    transition: all 0.3s ease-in;
+}
+
+.chat__req p {
+    text-align: left;
+    border-radius: 16px 2px 16px 16px;
+}
+
+.chat__res p {
+    border-radius: 2px 16px 16px 16px;
+}
+
+.message__input {
+    width: 100%;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.message__input input {
+    width: 100%;
+    padding: 0.4rem 0.3rem;
+    font-size: 0.9rem;
+    background-color: #FFF;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    color: #df4e15;
+}
+
+.message__input button {
+    padding: 0.2rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #df4e15;
+    border: 2px solid #df4e15;
+    color: #FFF;
+}

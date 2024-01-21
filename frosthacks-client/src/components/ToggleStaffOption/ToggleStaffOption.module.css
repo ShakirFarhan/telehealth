@@ -1,0 +1,51 @@
+.staff__toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.staff__toggle button {
+    padding: 0.5rem 0.8rem;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border-bottom: 1.8px solid transparent;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    outline: none;
+    color: #686868;
+}
+
+.staff__toggle button.staff__active {
+    color: #215FFA;
+}
+
+.staff__toggle button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1.8px;
+    background-color: #215FFA;
+    transition: width 0.3s ease-in-out;
+}
+
+.staff__toggle button:nth-child(1):after {
+    right: 0;
+}
+
+.staff__toggle button:nth-child(2):after {
+    left: 0;
+}
+
+.staff__toggle button.staff__active::after {
+    width: 100%;
+}
+
+.staff__toggle button:hover, .staff__toggle button:focus-visible {
+    color: #215FFA;
+}

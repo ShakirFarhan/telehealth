@@ -1,0 +1,26 @@
+.add__button {
+  padding: 0.9rem 1.9rem;
+  font-size: 1rem;
+  font-weight: 800;
+  background: #232323;
+
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.add__button a {
+  color: #fff;
+  text-decoration: none;
+}
+.add__button:hover {
+  background: #323131;
+}
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e89473;
+}

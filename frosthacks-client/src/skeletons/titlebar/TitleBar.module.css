@@ -1,0 +1,56 @@
+.title__bar {
+    width: 100%;
+    height: 48px;
+    padding: 1.2rem;
+    border: 1px solid #38383810;
+    border-radius: 28px;
+    background-color: rgba(36, 36, 36, 0.042);
+    position: relative;
+}
+
+.title__bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(12deg , rgba(78, 78, 78, 0.074) , rgba(234, 234, 234, 0.131), rgba(78, 78, 78, 0.201) );
+    box-shadow: 0 0 9px 3px rgba(106, 106, 106, 0.069);
+    border-radius: inherit;
+    animation: loading 1.2s infinite ease alternate;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0.8;
+    }
+
+    30% {
+        opacity: 0.9;
+    }
+
+    55% {
+        opacity: 0.72;
+    }
+
+    80% {
+        opacity: 0.12;
+    }
+
+    90% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@media all and (width <= 980px) {
+
+    .title__bar {
+        padding: 1.2rem;
+    }
+
+}

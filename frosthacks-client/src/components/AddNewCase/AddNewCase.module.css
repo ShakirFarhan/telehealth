@@ -1,0 +1,129 @@
+.livecase__card {
+    max-width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 32px;
+    border: 1px solid #48484820;
+    background-color: #FFF;
+    box-shadow: 0 1px 4px 2px #2323231f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.card__head {
+    width: 100%;
+}
+
+.card__head h1 {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #df4e15;
+}
+
+.card__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem 0.6rem;
+    flex-grow: 1;
+}
+
+.body__detail {
+    padding: 0.4rem 0.6rem;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 0.5rem;
+    border: 0.7px solid #48484824;
+}
+
+.body__detail p:nth-child(1) {
+    font-size: 0.88rem;
+    color: #545454;
+    text-align: center;
+}
+
+.body__detail span {
+    display: block;
+    width: 1px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.462);
+}
+
+.body__detail p:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232323;
+    text-align: center;
+}
+
+.accept__request {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.accept__request button {
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 18px;
+    width: 100%;
+    border: 1.2px solid #df4e15;
+    transition: background-color 0.2s ease, color 0.2s ease, outline 0.2s ease;
+}
+
+.accept__request button:nth-child(1) {
+    background-color: #df4e15;
+    color: #FFF;
+}
+
+.accept__request button:nth-child(2) {
+    background-color: transparent;
+    color: #df4e15;
+}
+
+.accept__request button:nth-child(1):focus-visible {
+    background-color: transparent;
+    color: #df4e15;
+}
+
+.accept__request button:nth-child(2):focus-visible {
+    outline: 1px solid #df4e15;
+}
+
+@media all and (width <= 640px) {
+
+    .livecase__card {
+        padding: 0.8rem;
+    }
+}
+
+@media all and (width <= 350px) {
+
+
+    .body__detail p:nth-child(1) {
+        font-size: 0.7rem;
+    }
+
+    .body__detail p:nth-child(3) {
+        font-size: 0.84rem;
+    }
+
+}

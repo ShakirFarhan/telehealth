@@ -1,0 +1,33 @@
+.auth__banner {
+  width: 50%;
+  min-height: 100vh;
+  background: linear-gradient(to right, transparent 40%, #f5f7f9 60%);
+  border-radius: 0 48px 48px 0;
+  box-shadow: 4px 0 8px 1px rgba(59, 114, 244, 0.169);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.auth__banner h1 {
+  font-size: 2rem;
+  color: #232323;
+  text-align: center;
+  object-fit: cover;
+}
+
+.auth__banner img:nth-child(2) {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+@media (width <= 800px) {
+  .auth__banner {
+    order: 2;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

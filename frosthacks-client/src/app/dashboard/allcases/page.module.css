@@ -1,0 +1,73 @@
+.dashboard__livecases {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 1.2rem;
+    padding-left: 260px;
+}
+
+.livecases__head {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: #FFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.livecases__head p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #BA1A1A;
+}
+
+.livecases__main {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.6rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: auto;
+    place-content: start;
+    gap: 1.2rem 0.8rem;
+}
+
+@media all and (width >= 1440px) {
+
+    /* .livecases__main {
+        grid-template-columns: repeat(auto 280px);
+    } */
+
+}
+
+@media all and (width <= 600px) {
+
+    .livecases__main {
+        grid-template-columns: repeat(1, 100%);
+        justify-content: center;
+        gap: 1rem;
+    }
+
+}
+
+@media all and (width <= 980px) {
+
+    .dashboard__livecases {
+        padding: 1.2rem;
+    }
+
+}
+
+@media all and (width <= 600px) {
+
+    .dashboard__livecases {
+        padding: 1rem 0.8rem;
+    }
+
+}

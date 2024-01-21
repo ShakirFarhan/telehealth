@@ -1,0 +1,87 @@
+.progress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.point {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    border: 1.6px solid #df4e15;
+    padding: 0.4rem;
+    cursor: default;
+    position: relative;
+    z-index: 1;
+}
+
+.point.making__progress {
+    animation: makingProgress 1.8s infinite ease alternate;
+}
+
+@keyframes makingProgress {
+    0% {
+        color: #FFF;
+        background-color: #df4e15;
+    }
+
+    50% {
+        color: #000;
+        background-color: transparent;
+    }
+
+    100% {
+        color: #FFF;
+        background-color: #df4e15;
+    }
+}
+
+.point.make__progress {
+    position: relative;
+    z-index: 1;
+}
+
+.point::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.3s linear;
+}
+
+.point.make__progress::before {
+    content: "";
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background-color: #df4e15;
+    z-index: 10;
+}
+
+.point::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 31px;
+    height: 6px;
+    background-color: transparent;
+    z-index: 0;
+    transition: width 0.6s ease-in;
+}
+
+.point.make__progress::after {
+    width: 24px;
+    background-color: #df4e15;
+}
+
+.point.make__progress:last-child::after {
+    background-color: transparent;
+}

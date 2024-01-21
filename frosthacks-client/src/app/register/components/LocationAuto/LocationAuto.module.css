@@ -1,0 +1,66 @@
+.auto__location {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.auto__location input {
+    width: 100%;
+    border: 1.6px solid #23232398;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #232323;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.auto__location .recommandLocations {
+    position: absolute;
+    left: 0;
+    top: 56px;
+    width: 100%;
+    height: 180px;
+    overflow-y: scroll;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.3rem;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 0 0 4px 1px #23232380;
+    transition: all 0.3s ease;
+}
+
+.auto__location .recommandLocations::-webkit-scrollbar {
+    width: 6px;
+}
+
+.auto__location .recommandLocations::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.auto__location .recommandLocations::-webkit-scrollbar-thumb {
+    background-color: #df4e15;
+}
+
+.recommandLocations li {
+    width: 100%;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.6rem 0.3rem;
+    color: #232323;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.recommandLocations li:hover {
+    background-color: #e7deda;
+}
